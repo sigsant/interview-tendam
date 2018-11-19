@@ -187,6 +187,7 @@ button{
 
 .conjunto-tarjetas{
     width: 6.25em;
+    border: 1px solid black;
 }
 
 .paypal{
