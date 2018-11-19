@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="preload" href="./css/index.css" as="style">
-        <link rel="preload" href="js/verificacion.js" as="script">
         <link rel="stylesheet" href="./css/index.css">
         <title>Billing</title>
     </head>
@@ -61,12 +60,12 @@
                             <img  class="conjunto-tarjetas" src="./assets/Logos/credit_Cards.png" alt="Visa, Mastercard, American Express">
                             <a href="https://www.paypal.com">
                             <img class="paypal" src="./assets/Logos/Paypal.png" alt="Paypal"></a>
-                            <img src="./assets/Logos/ideal.svg" alt="iDeal">
+                            <img src="./assets/Logos/ideal.png" alt="iDeal">
                         </div>
 
                         <form class="datos-tarjeta">
                             <input type="text" placeholder="Name on card">
-                            <input type="text" placeholder="Card number">
+                            <input id="card-number" type="text" placeholder="Card number" class="visa">
                             <p class="subtitulo">Expiration date</p>
                             <div id="caducidad">
                                 <div class="left">
@@ -81,6 +80,6 @@
                         </form>
                     </section>
         </main>
-        <script src="js/verificacion.js"></script>
+        <script src="js/verificacion.js" type="module"></script>
     </body>
 </html>
