@@ -1,0 +1,195 @@
+/* 
+ * El orden aparecido en el CSS sigue la jerarquía de especifidad semántica.
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/* Variables iniciales */
+:root{
+    --gris           : #E6E6E6;
+    --beige          : #B2B2B2;
+    --margen-superior: 2em;
+}
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    padding    : 0;
+    margin     : 0;
+}
+
+/* Outline HTML */
+
+header, nav, main, section, form{
+    display  : flex;
+    max-width: 100%;
+}
+
+header{
+    justify-content: center;
+    letter-spacing : .5em;
+}
+
+nav{
+    justify-content: space-around;
+    margin         : 1.25em 0em 3em 0em;
+    padding        : 0em 1.5em;
+    font-weight    : bold;
+    font-size      : 1.1em;
+    line-height    : 1.2em;
+}
+
+main{
+    width          : 980px;
+    margin         : 0 auto;
+    justify-content: center;
+}
+
+section{
+    flex-direction: column;
+    align-items   : center;
+}
+
+/* Etiquetas generales */
+
+form{
+    flex-direction: column;
+    margin        : 1.32em 0em 2em 0em;
+}
+
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+hr{
+    color : var(--gris);
+    width : 20.937em;
+    height: 0.06em;
+    margin: 2em 0em;
+}
+
+input[type="text"], input[type="tel"]{
+    border    : 1px solid var(--beige);
+    margin-top: var(--margen-superior);
+    padding   : .5em;
+    width     : 20.9375em;
+}
+
+label{
+    margin-left: 1em;
+}
+
+img{
+    max-width : 100%;
+    width     : 3.75rem;
+    height    : 3.125rem;
+    border    : 1px solid var(--gris);
+    cursor    : pointer;
+    margin    : 0em .5em;
+    transition: ease-in-out .5s border;
+}
+
+img:hover{
+    border: 1px solid black;
+}
+
+button{
+    background    : black;
+    color         : white;
+    font-size     : 0.875em;
+    font-weight   : 700;
+    letter-spacing: 0.0125em;
+    line-height   : 1.0625em;
+    width         : 13.3125em;
+    margin        : var(--margen-superior);
+    padding       : 0.875em;
+    align-self    : center;
+}
+
+/* ID */
+
+#tarjetas{
+    margin-top    : var(--margen-superior);
+    flex-direction: row;
+    width         : 100%;
+}
+
+#caducidad{
+    display        : flex;
+    width          : 100%;
+    justify-content: space-between;
+}
+
+
+#caducidad > div > input{
+    width      : 60px;
+    margin-left: .2em;
+}
+
+#caducidad > .right >.info{
+    background-position: 3.125em;
+}
+
+#tooltip{
+    color      : #ffffff;
+    background : #4C4C4B;
+    font-size  : 0.875rem;
+    line-height: 18px;
+    text-align : left;
+    width      : 17.5em;
+    padding    : 1.125em 1.25em 0.75em 1.25em;
+    align-self : flex-end;
+    display    : none;
+}
+
+/* Clases */
+
+.select{
+    color: var(--gris);
+}
+
+.subtitulo{
+    font-size : 0.75em;
+    color     : var(--beige);
+    margin-top: var(--margen-superior);
+}
+
+.pais{
+    font-size: 0.875em;
+}
+
+.info{
+    background-image   : url("../assets/Icons/info.svg");
+    background-repeat  : no-repeat;
+    background-position: 19.8em;
+    cursor             : help;
+}
+
+/* Clases de la subseccion tarjetas */
+
+.conjunto-tarjetas{
+    width: 6.25em;
+}
+
+.paypal{
+    width: 70px;
+}
+
+.arrow{
+    background-image   : url("../assets/Icons/arrow_down.svg");
+    background-repeat  : no-repeat;
+    background-position: 3.4em;
+}
+.cvn{
+    width: 96px;
+}
+
+/* Errores */
+
+.error{
+    color    : red;
+    font-size: 12px;
+}
+
+.hidden{
+    display: none;
+}
