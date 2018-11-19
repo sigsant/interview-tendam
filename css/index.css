@@ -8,6 +8,7 @@
 :root{
     --gris           : #E6E6E6;
     --beige          : #B2B2B2;
+    --gris-oscuro    : #4C4C4B;
     --margen-superior: 2em;
 }
 
@@ -131,18 +132,29 @@ button{
 
 #tooltip{
     color      : #ffffff;
-    background : #4C4C4B;
+    background : var(--gris-oscuro);
     font-size  : 0.875rem;
     line-height: 18px;
     text-align : left;
     width      : 17.5em;
-    padding    : 1.125em 1.25em 0.75em 1.25em;
+    padding    : 0em 1.25em 0.75em 1.25em;
     align-self : flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     opacity: 0;
     transition: .5s all;
     transition-delay: .5s;
 }
 
+.point-tooltip{
+    align-self: flex-end;
+    margin-top: -5px;
+    width: 25px;
+    height: 25px;
+    background: var(--gris-oscuro);
+    transform: rotate(45deg);
+}
 
 .info:hover + #tooltip{
     opacity:1;
