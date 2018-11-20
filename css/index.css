@@ -20,7 +20,7 @@
 
 /* Outline HTML */
 
-header, nav, main, section, form{
+header, nav, main, section, form, form > div{
     display  : flex;
     max-width: 100%;
 }
@@ -52,7 +52,7 @@ section{
 
 /* Etiquetas generales */
 
-form{
+form, form > div{
     flex-direction: column;
     margin        : 1.32em 0em 2em 0em;
 }
@@ -75,6 +75,8 @@ input[type="text"], input[type="tel"]{
     width     : 20.9375em;
 }
 
+
+
 label{
     margin-left: 1em;
 }
@@ -84,7 +86,7 @@ img{
     height    : 3.125rem;
     border    : 1px solid var(--gris);
     cursor    : pointer;
-    margin    : 0em .5em;
+    margin    : 0em .2em;
     transition: ease-in-out .5s border;
 }
 
@@ -115,10 +117,11 @@ button{
 
 #caducidad{
     display        : flex;
+    flex-direction: row;
     width          : 100%;
     justify-content: space-between;
+    margin: 0;
 }
-
 
 #caducidad > div > input{
     width      : 60px;
@@ -128,6 +131,8 @@ button{
 #caducidad > .right >.info{
     background-position: 3.125em;
 }
+
+/* Tooltip */
 
 #tooltip{
     color           : #ffffff;
@@ -180,6 +185,26 @@ button{
     background-repeat  : no-repeat;
     background-position: 19.8em;
     cursor             : help;
+}
+
+/* Controla el subtexto de ayuda del input */
+
+.label-flotante > input{
+    padding-top: .9em;
+}
+
+.label-flotante{
+    position: relative;
+    margin: 0;
+}
+
+.label-flotante > label{
+    padding: 8px 0px;
+    align-self: flex-start; 
+    position: absolute;
+    font-size: 12px;
+    top: 1.4em;
+    display:none;
 }
 
 /* Clases de la subseccion tarjetas */
