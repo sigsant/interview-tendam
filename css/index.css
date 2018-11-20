@@ -20,7 +20,7 @@
 
 /* Outline HTML */
 
-header, nav, main, section, form, form > div{
+header, nav, main, section, form, form > div, #shopping{
     display  : flex;
     max-width: 100%;
 }
@@ -40,9 +40,13 @@ nav{
 }
 
 main{
-    width          : 980px;
+    width          : 100%;
     margin         : 0 auto;
     justify-content: center;
+}
+
+aside{
+    flex-direction: flex-start;
 }
 
 section{
@@ -239,4 +243,57 @@ button{
 
 .hidden{
     display: none;
+}
+
+/* Aparece en pantallas grandes */
+
+.hide-mob{
+    display: none;
+}
+
+/* Cesta de la compra */
+
+#cabecera-caja{
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    align-content  : center;
+    font-weight    : bold;
+    font-size      : 14px;
+}
+#shopping{
+    display       : flex;
+    flex-direction: column;
+    width         : 400px;
+    padding       : 3em 2em;
+    height        : 561px;
+    background    : var(--gris);
+}
+
+#edicion{
+    color        : var(--beige);
+    font-weight  : normal;
+    border-bottom: 1px dotted;
+    cursor       : pointer;
+    transition   : 1s linear color;
+}
+#edicion:hover{
+    color: black;
+}
+
+#subtotal, #delivery, #total{
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    margin         : 5px 0px;
+    font-size      : 14px;
+}
+
+.tituloPrecio{
+    font-weight: bold;
+}
+
+.precioFinal{
+    font-weight: bold;
+    font-size  : 18px;
 }

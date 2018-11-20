@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preload" href="./css/index.css" as="style">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/query.css">
     <title>Billing</title>
 </head>
 
@@ -17,9 +18,9 @@
     </header>
 
     <nav>
-        <span class="select">1</span>
-        <span>2. Billing</span>
-        <span class="select">3</span>
+        <span class="select">1.<span class="hide-mob">Shipping</span></span>
+        <span>2.Billing</span>
+        <span class="select">3.<span class="hide-mob">Order confirmation</span></span>
     </nav>
 
     <main>
@@ -117,6 +118,30 @@
                 </article>
             </section>
     </main>
+    <aside>
+        <div id="shopping" class="hide-mob">
+            <div id="cabecera-caja">
+                    <p>YOUR CART(4)</p>
+                    <p id="edicion">Edit</p>
+            </div>
+            <div id="lista-compra">
+                <!-- ? ¿Usar JSON o hardcode? -->
+            </div>
+            <div id="subtotal">
+                <p>Subtotal</p>
+                <p>79,99&euro;</p> 
+            </div>
+            <div id="delivery">
+                <p>Standard delivery</p>
+                <p>3,95&euro;</p>
+            </div>
+            <hr>
+            <div id="total">
+                <p class="tituloPrecio">Total</p>
+                <p class="precioFinal">86,94&euro;</p>
+            </div>
+        </div>
+    </aside>
     <script src="js/verificacion.js" type="module"></script>
 </body>
 

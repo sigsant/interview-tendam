@@ -1,0 +1,34 @@
+@media screen and (min-width: 979px){
+    body{
+        display              : grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows   : auto;
+        grid-template-areas  : 
+        "header header header header"
+        "nav nav nav nav"
+        " main . . caja"
+    }
+    header{
+        grid-area: header;
+    }
+    nav{
+        font-size    : 14px;
+        height       : 1.5em;
+        width        : 500px;
+        margin       : 1.25em auto;
+        margin-bottom: 3em;
+        border       : 1px solid red;
+        grid-area    : nav;
+    }
+    main{
+        justify-content: flex-start;
+        grid-area      : main;
+        padding-left   : 35px;
+    }
+    aside{
+        grid-area: caja;
+    }
+    .hide-mob{
+        display: inline-block;
+    }
+}
