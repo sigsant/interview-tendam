@@ -1,6 +1,13 @@
 import { Expresiones } from "./clases.js";
 
-const helper = name => this.nombre != "" ? this.nombre.style.display="" : this.nombre.style.display="none";
+// FIXME lanza error de enlace
+// ? ¿Enlazar directamente en el HTML5 con onfocus o onchange?
+// Muestra la etiqueta emergente al escribir.
+
+const helper = name => this.nombre != "" ? this.nombre.style.display = "" : this.nombre.style.display = "none";
+
+// TODO Refactorizar
+// Llama a la clase que contiene la validación mediante Regex
 
 const validar = () => {
     let   nombre         = document.querySelector('#nombre');
