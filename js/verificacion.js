@@ -1,5 +1,7 @@
 import { Expresiones } from "./clases.js";
 
+const helper = name => this.nombre != "" ? this.nombre.style.display="" : this.nombre.style.display="none";
+
 const validar = () => {
     let   nombre         = document.querySelector('#nombre');
     const nombreError    = document.querySelector('.nombre');
