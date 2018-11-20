@@ -54,7 +54,7 @@ section{
 
 form, form > div{
     flex-direction: column;
-    margin        : 1.32em 0em 2em 0em;
+    margin-top    : 1.32em;
 }
 
 h2{
@@ -62,10 +62,10 @@ h2{
 }
 
 hr{
-    color : var(--gris);
-    width : 20.937em;
-    height: 0.06em;
-    margin: 2em 0em;
+    color        : var(--gris);
+    width        : 20.937em;
+    height       : 0.06em;
+    margin-bottom: 2.5em;
 }
 
 input[type="text"], input[type="tel"]{
@@ -74,8 +74,6 @@ input[type="text"], input[type="tel"]{
     padding   : .5em;
     width     : 20.9375em;
 }
-
-
 
 label{
     margin-left: 1em;
@@ -109,6 +107,10 @@ button{
 
 /* ID */
 
+#regalo{
+    margin-bottom: 2.5em;
+}
+
 #tarjetas{
     margin-top    : var(--margen-superior);
     flex-direction: row;
@@ -117,10 +119,10 @@ button{
 
 #caducidad{
     display        : flex;
-    flex-direction: row;
+    flex-direction : row;
     width          : 100%;
     justify-content: space-between;
-    margin: 0;
+    margin         : 0;
 }
 
 #caducidad > div > input{
@@ -195,16 +197,16 @@ button{
 
 .label-flotante{
     position: relative;
-    margin: 0;
+    margin  : 0;
 }
 
 .label-flotante > label{
-    padding: 8px 0px;
-    align-self: flex-start; 
-    position: absolute;
-    font-size: 12px;
-    top: 1.4em;
-    display:none;
+    padding   : 8px 0px;
+    align-self: flex-start;
+    position  : absolute;
+    font-size : 12px;
+    top       : 1.4em;
+    display   : none;
 }
 
 /* Clases de la subseccion tarjetas */
