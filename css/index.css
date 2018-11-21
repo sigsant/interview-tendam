@@ -109,6 +109,21 @@ button{
     padding       : 0.875em;
     align-self    : center;
 }
+figure{
+    margin-right: 10px;
+    width       : 100px;
+}
+
+figure > img{
+    display: block;
+    margin : 0 auto;
+}
+figcaption{
+    margin-top: 7px;
+    text-align: center;
+    font-size : 12px;
+    display   : none;
+}
 
 /* ID */
 
@@ -117,9 +132,9 @@ button{
 }
 
 #tarjetas{
-    margin-top    : var(--margen-superior);
-    flex-direction: row;
-    width         : 100%;
+    display   : flex;
+    margin-top: var(--margen-superior);
+    width     : 100%;
 }
 
 #caducidad{
@@ -139,16 +154,13 @@ button{
     background-position: 3.125em;
 }
 
-#pay-card{
-    /* display: none; */
-}
-
 #pay-paypal{
     background: black;
     color     : white;
     width     : 240px;
     height    : 48px;
     display   : none;
+    align-self: flex-start;
 }
 
 
@@ -233,13 +245,15 @@ input:focus + label {
 }
 /* Clases de la subseccion tarjetas */
 
+.ideal{
+    margin-left: -10px;
+}
 
 .visa{
     background-image   : url("../assets/Logos/Visa.png");
     background-repeat  : no-repeat;
     background-position: 18em;
 }
-
 .arrow{
     background-image   : url("../assets/Icons/arrow_down.svg");
     background-repeat  : no-repeat;
