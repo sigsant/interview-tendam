@@ -156,7 +156,12 @@ figcaption{
     background-position: 3.125em;
 }
 
+#pay-card{
+    margin-top: -7px;
+}
+
 #pay-paypal{
+    margin-top: 40px;
     background: black;
     color     : white;
     width     : 240px;
