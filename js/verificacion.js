@@ -25,12 +25,19 @@ const ocultar = bloque =>{
 const mostrar = bloque =>{
     document.querySelector(bloque).style.display = "block";
 };
+// Aplica el borde a la tarjeta seleccionada y elimina el otro
+const aplicarBorde = (elemento1, elemento2) =>{
+    document.querySelector(elemento1).style.border = "1px solid black";
+    document.querySelector(elemento2).style.border = "1px solid #E6E6E6";
+
+};
 
 document.querySelector('#paypal').onclick = () =>{
     ocultar("#pay-card");
     ocultar('.fig-card');
     mostrar('#pay-paypal');
     mostrar('.fig-pay');
+    aplicarBorde('#paypal', '#visa');
 };
 
 document.querySelector('#visa').onclick = () =>{
@@ -38,6 +45,7 @@ document.querySelector('#visa').onclick = () =>{
     ocultar('.fig-pay');
     mostrar('#pay-card');
     mostrar('.fig-card');
+    aplicarBorde('#visa', '#paypal');
 };
 
 document.querySelector('button').onclick = validar;
