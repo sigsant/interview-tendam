@@ -213,6 +213,9 @@ button{
     display   : none;
 }
 
+input:focus + label {
+    display: block;
+}
 /* Clases de la subseccion tarjetas */
 
 .conjunto-tarjetas{
