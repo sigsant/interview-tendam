@@ -88,19 +88,18 @@
                 <article>
                     <h2>Select payment method</h2>
                     <div id="tarjetas">
-                        <img class="conjunto-tarjetas" src="./assets/Logos/credit_Cards.png" alt="Visa, Mastercard, American Express">
-                        <a href="https://www.paypal.com">
-                            <img class="paypal" src="./assets/Logos/Paypal.png" alt="Paypal"></a>
+                        <img id="visa" src="./assets/Logos/credit_Cards.png" alt="Visa, Mastercard, American Express">
+                            <img id="paypal" src="./assets/Logos/Paypal.png" alt="Paypal">
                         <img src="./assets/Logos/ideal.png" alt="iDeal">
                     </div>
 
-                    <form class="datos-tarjeta">
+                    <form id="pay-card" class="datos-tarjeta">
                             <div id="contieneProv" class="label-flotante">
                         <input id="name-card" type="text" placeholder="Name on card">
                         <label for="name-card">Name on card</label>
                         </div>
                         <div id="contieneProv" class="label-flotante">
-                        <input id="card-number" type="text" placeholder="Card number" class="visa">
+                        <input id="card-number" type="text" placeholder="Card number">
                         <label for="card-number">Card number</label>
                         </div>
                         <p class="subtitulo">Expiration date</p>
@@ -116,6 +115,8 @@
                         <button type='button'>CONFIRM PAYMENT</button>
                     </form>
                 </article>
+                <div></div>
+                <button id="pay-paypal" type="button">PAY WITH PAYPAL</button>
             </section>
     </main>
     <aside>
