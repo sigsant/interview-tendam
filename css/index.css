@@ -7,6 +7,8 @@
 /* Variables iniciales */
 :root{
     --gris           : #E6E6E6;
+    --borde-gris     : 1px solid #E6E6E6;
+    --borde-negro    : 1px solid black;
     --beige          : #B2B2B2;
     --gris-oscuro    : #4C4C4B;
     --margen-superior: 2em;
@@ -20,7 +22,7 @@
 
 /* Outline HTML */
 
-header, nav, main, section, form, form > div{
+header, nav, main, section, form, form > div, #shopping{
     display  : flex;
     max-width: 100%;
 }
@@ -28,6 +30,7 @@ header, nav, main, section, form, form > div{
 header{
     justify-content: center;
     letter-spacing : .5em;
+    margin-top     : 1.5em;
 }
 
 nav{
@@ -40,9 +43,13 @@ nav{
 }
 
 main{
-    width          : 980px;
+    width          : 100%;
     margin         : 0 auto;
     justify-content: center;
+}
+
+aside{
+    display: none;
 }
 
 section{
@@ -69,7 +76,7 @@ hr{
 }
 
 input[type="text"], input[type="tel"]{
-    border    : 1px solid var(--beige);
+    border    : var(--borde-gris);
     margin-top: var(--margen-superior);
     padding   : .5em;
     width     : 20.9375em;
@@ -82,7 +89,7 @@ label{
 img{
     max-width : 100%;
     height    : 3.125rem;
-    border    : 1px solid var(--gris);
+    border    : var(--borde-gris);
     cursor    : pointer;
     margin    : 0em .2em;
     transition: ease-in-out .5s border;
@@ -104,6 +111,21 @@ button{
     padding       : 0.875em;
     align-self    : center;
 }
+figure{
+    margin-right: 10px;
+    width       : 100px;
+}
+
+figure > img{
+    display: block;
+    margin : 0 auto;
+}
+figcaption{
+    margin-top: 7px;
+    text-align: center;
+    font-size : 12px;
+    display   : none;
+}
 
 /* ID */
 
@@ -112,9 +134,9 @@ button{
 }
 
 #tarjetas{
-    margin-top    : var(--margen-superior);
-    flex-direction: row;
-    width         : 100%;
+    display   : flex;
+    margin-top: var(--margen-superior);
+    width     : 100%;
 }
 
 #caducidad{
@@ -133,6 +155,16 @@ button{
 #caducidad > .right >.info{
     background-position: 3.125em;
 }
+
+#pay-paypal{
+    background: black;
+    color     : white;
+    width     : 240px;
+    height    : 48px;
+    display   : none;
+    align-self: flex-start;
+}
+
 
 /* Tooltip */
 
@@ -206,13 +238,17 @@ button{
     position  : absolute;
     font-size : 12px;
     top       : 1.4em;
-    display   : none;
+    opacity   : 0;
+    transition: linear .8s all;
 }
 
+input:focus + label {
+    opacity: 1;
+}
 /* Clases de la subseccion tarjetas */
 
-.conjunto-tarjetas{
-    border: 1px solid black;
+.ideal{
+    margin-left: -10px;
 }
 
 .visa{
@@ -220,7 +256,6 @@ button{
     background-repeat  : no-repeat;
     background-position: 18em;
 }
-
 .arrow{
     background-image   : url("../assets/Icons/arrow_down.svg");
     background-repeat  : no-repeat;
@@ -239,4 +274,57 @@ button{
 
 .hidden{
     display: none;
+}
+
+/* Aparece en pantallas grandes */
+
+.hide-mob{
+    display: none;
+}
+
+/* Cesta de la compra */
+
+#cabecera-caja{
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    align-content  : center;
+    font-weight    : bold;
+    font-size      : 14px;
+}
+#shopping{
+    display       : flex;
+    flex-direction: column;
+    width         : 400px;
+    padding       : 3em 2em;
+    height        : 561px;
+    background    : var(--gris);
+}
+
+#edicion{
+    color        : var(--beige);
+    font-weight  : normal;
+    border-bottom: 1px dotted;
+    cursor       : pointer;
+    transition   : 1s linear color;
+}
+#edicion:hover{
+    color: black;
+}
+
+#subtotal, #delivery, #total{
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    margin         : 5px 0px;
+    font-size      : 14px;
+}
+
+.tituloPrecio{
+    font-weight: bold;
+}
+
+.precioFinal{
+    font-weight: bold;
+    font-size  : 18px;
 }

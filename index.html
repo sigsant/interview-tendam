@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preload" href="./css/index.css" as="style">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/query.css">
     <title>Billing</title>
 </head>
 
@@ -17,9 +18,9 @@
     </header>
 
     <nav>
-        <span class="select">1</span>
-        <span>2. Billing</span>
-        <span class="select">3</span>
+        <span class="select">1.<span class="hide-mob">Shipping</span></span>
+        <span>2.Billing</span>
+        <span class="select">3.<span class="hide-mob">Order confirmation</span></span>
     </nav>
 
     <main>
@@ -29,33 +30,34 @@
 
                 <form>
                     <div id="contieneNombre" class="label-flotante">
+                        <!-- <label for="nombre">Name</label> -->
+                        <input id="nombre" type="text" placeholder="Name" required aria-required="true">                        
                         <label for="nombre">Name</label>
-                        <input id="nombre" type="text" placeholder="Name" required aria-required="true" onload=helper(this.id)>
                         <span class="nombre error hidden">This field is mandatory</span>
                     </div>
                     <div id="contieneApellido" class="label-flotante">
-                        <label for="apellido">Surname</label>
                         <input id="apellido" type="text" placeholder="Surname" required aria-required="true">
+                        <label for="apellido">Surname</label>
                         <span class="apellido error hidden">This field is mandatory</span>
                     </div>
                     <div id="contieneDir" class="label-flotante">
-                        <label for="direccion">Address</label>
                         <input id="direccion" type="text" placeholder="Address" required aria-required="true">
+                        <label for="direccion">Address</label>
                         <span class="direccion error hidden">This field is mandatory</span>
                     </div>
                     <div id="contieneZip" class="label-flotante">
-                        <label for="zipCode">Zip Code</label>
                         <input id="zipCode" type="text" placeholder="Zip Code" required aria-required="true">
+                        <label for="zipCode">Zip Code</label>
                         <span class="zipCode error hidden">This field is mandatory</span>
                     </div>
                     <div id="contieneCiudad" class="label-flotante">
-                        <label for="ciudad">City</label>
                         <input id="ciudad" type="text" placeholder="City" required aria-required="true">
+                        <label for="ciudad">City</label>
                         <span class="ciudad error hidden">This field is mandatory</span>
                     </div>
                     <div id="contieneProv" class="label-flotante">
-                        <label for="Province">Province</label>
                         <input id="provincia" type="text" placeholder="Province" required aria-required="true">
+                        <label for="Province">Province</label>
                         <span class="provincia error hidden">This field is mandatory</span>
                     </div>
 
@@ -63,9 +65,8 @@
                     <span class="pais">Spain</span>
 
                     <div id="contienePhone" class="label-flotante">
-                        <label for="info_number">Phone</label>
-                        <input id="info_number" class="info" type="tel" placeholder="Phone Number" required
-                            aria-required="true">
+                        <label for="info_number">Phone Number</label>
+                        <input id="info_number" class="info" type="tel" placeholder="Phone Number" required aria-required="true">
 
                         <div id="tooltip">
                             <p class="point-tooltip"></p>
@@ -87,20 +88,28 @@
                 <article>
                     <h2>Select payment method</h2>
                     <div id="tarjetas">
-                        <img class="conjunto-tarjetas" src="./assets/Logos/credit_Cards.png" alt="Visa, Mastercard, American Express">
-                        <a href="https://www.paypal.com">
-                            <img class="paypal" src="./assets/Logos/Paypal.png" alt="Paypal"></a>
-                        <img src="./assets/Logos/ideal.png" alt="iDeal">
+                        <figure>
+                        <img id="visa" src="./assets/Logos/credit_Cards.png" alt="Visa, Mastercard, American Express">
+                        <figcaption class="fig-card">Cards</figcaption>
+                    </figure>
+                    <figure>
+                            <img id="paypal" src="./assets/Logos/Paypal.png" alt="Paypal">
+                            <figcaption class="fig-pay">Paypal</figcaption>
+                        </figure>
+                        <figure class="ideal">
+                            <img src="./assets/Logos/ideal.png" alt="iDeal">
+                            <figcaption class="fig-ideal">iDeal</figcaption>
+                        </figure>
                     </div>
 
-                    <form class="datos-tarjeta">
+                    <form id="pay-card" class="datos-tarjeta">
                             <div id="contieneProv" class="label-flotante">
-                                    <label for="name-card">Name on card</label>
                         <input id="name-card" type="text" placeholder="Name on card">
+                        <label for="name-card">Name on card</label>
                         </div>
                         <div id="contieneProv" class="label-flotante">
-                                <label for="card-number">Card number</label>
-                        <input id="card-number" type="text" placeholder="Card number" class="visa">
+                        <input id="card-number" type="text" placeholder="Card number">
+                        <label for="card-number">Card number</label>
                         </div>
                         <p class="subtitulo">Expiration date</p>
                         <div id="caducidad">
@@ -115,8 +124,34 @@
                         <button type='button'>CONFIRM PAYMENT</button>
                     </form>
                 </article>
+                <div></div>
+                <button id="pay-paypal" type="button">PAY WITH PAYPAL</button>
             </section>
     </main>
+    <aside>
+        <div id="shopping" class="hide-mob">
+            <div id="cabecera-caja">
+                    <p>YOUR CART(4)</p>
+                    <p id="edicion">Edit</p>
+            </div>
+            <div id="lista-compra">
+                <!-- ? ¿Usar JSON o hardcode? -->
+            </div>
+            <div id="subtotal">
+                <p>Subtotal</p>
+                <p>79,99&euro;</p> 
+            </div>
+            <div id="delivery">
+                <p>Standard delivery</p>
+                <p>3,95&euro;</p>
+            </div>
+            <hr>
+            <div id="total">
+                <p class="tituloPrecio">Total</p>
+                <p class="precioFinal">86,94&euro;</p>
+            </div>
+        </div>
+    </aside>
     <script src="js/verificacion.js" type="module"></script>
 </body>
 
