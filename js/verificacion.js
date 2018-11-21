@@ -31,13 +31,25 @@ document.querySelector('button').onclick = validar;
 
 /* Aparece el logo de visa a partir de una máscara: 
  * 
- * E
+ *  XXXX XXXX XXXX XXXX
  */
 
 document.querySelector("#card-number").onkeyup = () => {
+    let regex        = new RegExp('^\\d{4}\\s+\\d{4}\\s+\\d{4}\\s+\\d{4}$');
     let campoTarjeta = document.querySelector("#card-number");
-    let regex = new RegExp('^\\d{4}\\s+\\d{4}\\s+\\d{4}\\s+\\d{4}$');
+    
      (regex.test(campoTarjeta.value)) ? 
-         campoTarjeta.classList.add('visa') : 
+         campoTarjeta.classList.add('visa'): 
          campoTarjeta.classList.remove('visa');
-}
+};
+
+document.querySelector('#paypal').onclick = () =>{
+    document.querySelector('#pay-card').style.display   = "none";
+    document.querySelector('#pay-paypal').style.display = "block";
+};
+
+document.querySelector('#visa').onclick = () =>{
+    document.querySelector('#pay-paypal').style.display = "none";
+    document.querySelector('#pay-card').style.display   = "block";
+};
+
