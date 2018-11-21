@@ -18,14 +18,14 @@
         grid-template-areas  : 
         "header header header header"
         "nav nav nav nav"
-        " main . . caja"
+        " . main . caja "
     }
     header{
         grid-area: header;
     }
     nav{
-        font-size    : 14px;
-        grid-area    : nav;
+        font-size: 14px;
+        grid-area: nav;
     }
     main{
         justify-content: flex-start;
@@ -33,8 +33,8 @@
         padding-left   : 35px;
     }
     aside{
-        display: flex;
+        display       : flex;
         flex-direction: flex-start;
-        grid-area: caja;
+        grid-area     : caja;
     }
 }
