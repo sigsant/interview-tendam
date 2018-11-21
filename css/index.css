@@ -28,6 +28,7 @@ header, nav, main, section, form, form > div, #shopping{
 header{
     justify-content: center;
     letter-spacing : .5em;
+    margin-top: 1.5em;
 }
 
 nav{
@@ -46,7 +47,7 @@ main{
 }
 
 aside{
-    flex-direction: flex-start;
+    display: none;
 }
 
 section{

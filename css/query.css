@@ -1,4 +1,17 @@
-@media screen and (min-width: 979px){
+@media (min-width: 600px){
+    .hide-mob{
+        display: inline-block;
+    }
+    nav{
+        font-size    : 14px;
+        height       : 1.5em;
+        width        : 500px;
+        margin       : 1.25em auto;
+        margin-bottom: 3em;
+    }
+}
+
+@media (min-width: 979px){
     body{
         display              : grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -17,7 +30,6 @@
         width        : 500px;
         margin       : 1.25em auto;
         margin-bottom: 3em;
-        border       : 1px solid red;
         grid-area    : nav;
     }
     main{
@@ -26,9 +38,8 @@
         padding-left   : 35px;
     }
     aside{
+        display: flex;
+        flex-direction: flex-start;
         grid-area: caja;
-    }
-    .hide-mob{
-        display: inline-block;
     }
 }
