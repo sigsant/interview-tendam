@@ -3,7 +3,6 @@
         display: inline-block;
     }
     nav{
-        font-size    : 14px;
         height       : 1.5em;
         width        : 500px;
         margin       : 1.25em auto;
@@ -26,10 +25,6 @@
     }
     nav{
         font-size    : 14px;
-        height       : 1.5em;
-        width        : 500px;
-        margin       : 1.25em auto;
-        margin-bottom: 3em;
         grid-area    : nav;
     }
     main{
