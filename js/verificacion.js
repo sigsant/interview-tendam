@@ -1,15 +1,9 @@
 import { Expresiones } from "./clases.js";
 
-// FIXME lanza error de enlace
-// ? ¿Enlazar directamente en el HTML5 con onfocus o onchange?
-// Muestra la etiqueta emergente al escribir.
-
-const helper = name => this.nombre != "" ? this.nombre.style.display = "" : this.nombre.style.display = "none";
-
 // TODO Refactorizar
 // Llama a la clase que contiene la validación mediante Regex
 
-const validar = () => {
+let validar = () => {
     let   nombre         = document.querySelector('#nombre');
     const nombreError    = document.querySelector('.nombre');
     let   apellido       = document.querySelector('#apellido');
@@ -22,7 +16,7 @@ const validar = () => {
     const direccionError = document.querySelector('.direccion');
     let   zipCode        = document.querySelector('#zipCode');
     const zipCodeError   = document.querySelector('.zipCode');
-    
+   
     let validacion = new Expresiones();
 
     validacion.validarnombre(nombre, nombreError);
@@ -34,3 +28,16 @@ const validar = () => {
 };
 
 document.querySelector('button').onclick = validar;
+
+/* Aparece el logo de visa a partir de una máscara: 
+ * 
+ * E
+ */
+
+document.querySelector("#card-number").onkeyup = () => {
+    let campoTarjeta = document.querySelector("#card-number");
+    let regex = new RegExp('^\\d{4}\\s+\\d{4}\\s+\\d{4}\\s+\\d{4}$');
+     (regex.test(campoTarjeta.value)) ? 
+         campoTarjeta.classList.add('visa') : 
+         campoTarjeta.classList.remove('visa');
+}
