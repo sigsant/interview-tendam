@@ -38,9 +38,9 @@
         grid-area     : caja;
     }
     input[type="text"], input[type="tel"]{
-        border   : 2px solid #e6e6e6;
+        border   : 1px solid #b2b2b2;
         width    : 400px;
-        font-size: 14px;
+        font-size: 13px;
     }
     form{
         margin-top: .7em;
