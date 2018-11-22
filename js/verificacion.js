@@ -29,7 +29,6 @@ const mostrar = bloque =>{
 const aplicarBorde = (elemento1, elemento2) =>{
     document.querySelector(elemento1).style.border = "1px solid black";
     document.querySelector(elemento2).style.border = "1px solid #E6E6E6";
-
 };
 
 document.querySelector('#paypal').onclick = () =>{
@@ -70,9 +69,9 @@ function validar(){
     let validacion = new Expresiones();
 
     validacion.validarnombre(nombre, nombreError);
-    validacion.validarnombre(apellido, apellidoError);
     validacion.validarnombre(ciudad, ciudadError);
     validacion.validarnombre(provincia, provinciaError);
+    validacion.validarApellido(apellido, apellidoError);
     validacion.validarZip(zipCode, zipCodeError);
     validacion.validarDir(direccion, direccionError);
 }

@@ -16,6 +16,18 @@ class Expresiones{
             nombre.style.border = "1px solid red";
         }
     }
+    validarApellido(nombre, clase){
+        // El usuario debe ingresar sus dos apellidos
+        let regex = new RegExp('^[A-Za-z]+\\s[A-Za-z]+$');
+    
+        if(regex.test(nombre.value) && nombre.value.length >= 3){
+            clase.classList.add('hidden');
+            nombre.style.border = "1px solid green";
+        }else{
+            clase.classList.remove('hidden');
+            nombre.style.border = "1px solid red";
+        }
+    }
     validarZip(zip, clase){
         let regex = new RegExp('\\b\\d{5}\\b');
         
@@ -28,7 +40,11 @@ class Expresiones{
         }
     }
     validarDir(dir, clase){
-        let regex = new RegExp('^[A-Za-z]+\\s[A-Z-a-z]+\\W+\\s[0-9]');
+        // Validar si (palabra palabra, numero)
+        // let regex = new RegExp('^[A-Za-z]+\\s[A-Z-a-z]+\\W+\\s[0-9]');
+
+        //Validar sólo si comienza con una letra
+        let regex = new RegExp('^[A-Za-z]');
         
         if(dir.value != '' && regex.test(dir.value)){
             clase.classList.add('hidden');
