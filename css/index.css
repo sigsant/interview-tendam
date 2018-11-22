@@ -266,7 +266,7 @@ input:focus + label {
 .arrow{
     background-image   : url("../assets/Icons/arrow_down.svg");
     background-repeat  : no-repeat;
-    background-position: 3.4em;
+    background-position: 3.3em;
 }
 .cvn{
     width: 6em;
