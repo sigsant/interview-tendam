@@ -234,7 +234,7 @@ figcaption{
 /* Controla el subtexto de ayuda del input */
 
 .label-flotante > input{
-    padding-top: .9em;
+    padding-top: .8em;
 }
 
 .label-flotante{
@@ -246,8 +246,8 @@ figcaption{
     padding   : 0.5em 0em;
     align-self: flex-start;
     position  : absolute;
-    font-size : 0.75em;
-    top       : 1.4em;
+    font-size : 0.72em;
+    top       : 1.7em;
     opacity   : 0;
     transition: linear .8s all;
 }
