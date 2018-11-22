@@ -10,10 +10,10 @@
 /* Variables iniciales */
 :root{
     --gris       : #E6E6E6;
-    --borde-gris : 1px solid #E6E6E6;
+    --borde-gris : 1px solid #999999;
     --borde-negro: 1px solid black;
     --beige      : #B2B2B2;
-    --borde-beige: 1px solid ##B2B2B2;
+    --borde-beige: 1px solid #B2B2B2;
 
     --gris-oscuro    : #4C4C4B;
     --margen-superior: 2em;
@@ -139,12 +139,14 @@ figcaption{
 #regalo{
     margin-bottom: 2.5em;
     font-size    : 0.875em;
+    margin-left  : .5em;
 }
 
 #tarjetas{
-    display   : flex;
-    margin-top: var(--margen-superior);
-    width     : 100%;
+    display     : flex;
+    margin-top  : var(--margen-superior);
+    width       : 100%;
+    padding-left: .8em;
 }
 
 #caducidad{
