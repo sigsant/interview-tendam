@@ -1,5 +1,8 @@
 /* 
- * El orden aparecido en el CSS sigue la jerarquía de especifidad semántica.
+ * El orden aparecido en el CSS sigue la jerarquía de especifidad estructural.
+
+ * Cuando las clases - id - etiquetas estructurales están íntimamente relacionadas, las he 
+ * agrupado en un bloque semántico encerrado entre comentarios.
  */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
@@ -144,7 +147,7 @@ figcaption{
 #caducidad{
     display        : flex;
     flex-direction : row;
-    width          : 100%;
+    width          : 300px;
     justify-content: space-between;
     margin         : 0;
 }
@@ -173,7 +176,7 @@ figcaption{
 }
 
 
-/* Tooltip */
+/* Bloque semántico: Tooltip */
 
 #tooltip{
     color           : #ffffff;
@@ -252,6 +255,15 @@ figcaption{
 input:focus + label {
     opacity: 1;
 }
+
+/* Seccion tarjeta de regalo */
+.interludio{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 100%;
+}
+
 /* Clases de la subseccion tarjetas */
 
 .ideal{
@@ -263,13 +275,19 @@ input:focus + label {
     background-repeat  : no-repeat;
     background-position: 18em;
 }
+/* Bloque semántico: Posicionamiento de las flechas en Mes y año en la seccion 'expire date' en tarjetas */
 .arrow{
     background-image   : url("../assets/Icons/arrow_down.svg");
     background-repeat  : no-repeat;
-    background-position: 3.3em;
+    background-size: 20px;
 }
-.cvn{
-    width: 6em;
+
+#year{
+    background-position: 2.8em;
+}
+
+#month{
+    background-position: 3.3em;
 }
 
 /* Errores */
@@ -289,7 +307,7 @@ input:focus + label {
     display: none;
 }
 
-/* Cesta de la compra */
+/* Aside: Cesta de la compra */
 
 #cabecera-caja{
     display        : flex;
@@ -369,9 +387,4 @@ input:focus + label {
 }
 
 
-.interludio{
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
-    width: 100%;
-}
+
