@@ -9,7 +9,7 @@
         margin-bottom: 3em;
     }
     .interludio{
-        width: 357px;
+        width: 330px;
     }
 }
 
@@ -36,9 +36,8 @@
         padding-left   : 2.1875rem;
     }
     aside{
-        display       : flex;
-        flex-direction: flex-start;
-        grid-area     : caja;
+        display  : flex;
+        grid-area: caja;
     }
     input[type="text"], input[type="tel"]{
         border: 1px solid #b2b2b2;
@@ -76,7 +75,7 @@
         margin      : 2.5em 0em;
     }
     .interludio{
-        width: 425px;
+        width: 420px;
     }
 }
 

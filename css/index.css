@@ -267,7 +267,7 @@ input:focus + label {
     display       : flex;
     flex-direction: column;
     align-self    : center;
-    width         : 370px;
+    width         : 340px;
 }
 
 /* Clases de la subseccion tarjetas */
