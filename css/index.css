@@ -368,3 +368,10 @@ input:focus + label {
     font-size  : 1.125em;
 }
 
+
+.interludio{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 100%;
+}
