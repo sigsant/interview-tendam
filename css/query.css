@@ -18,7 +18,7 @@
         grid-template-areas  : 
         "header header header header"
         "nav nav nav nav"
-        " . main  . caja "
+        " main .  . caja "
     }
     header{
         grid-area: header;
@@ -30,7 +30,7 @@
     main{
         justify-content: flex-start;
         grid-area      : main;
-        padding-left   : 35px;
+        padding-left   : 2.1875rem;
     }
     aside{
         display       : flex;
@@ -49,6 +49,40 @@
         background-position: 29em;
     }
     .visa{
-        background-position: 350px;
+        background-position: 21.875em;
+    }
+    #year{
+        background-position: 3.5em;
+    }
+    #month{
+        background-position: 4em;
+    }
+    .button{
+        width      : 15em;
+        margin-left: 1em;
+    }
+    article{
+        width: 25.9375em;
+    }
+    .paypal{
+        display        : flex;
+        width          : 25.9375em;
+        justify-content: flex-start;
+    }
+    #pay-paypal{
+        justify-self: flex-start;
+        margin      : 2.5em 0em;
+    }
+}
+
+@media (min-width: 1200px){
+    body{
+        display              : grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows   : auto;
+        grid-template-areas  : 
+        "header header header header"
+        "nav nav nav nav"
+        " . main  . caja "
     }
 }

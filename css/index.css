@@ -9,10 +9,12 @@
 
 /* Variables iniciales */
 :root{
-    --gris           : #E6E6E6;
-    --borde-gris     : 0.0625em solid #E6E6E6;
-    --borde-negro    : 0.0625em solid black;
-    --beige          : #B2B2B2;
+    --gris       : #E6E6E6;
+    --borde-gris : 1px solid #E6E6E6;
+    --borde-negro: 1px solid black;
+    --beige      : #B2B2B2;
+    --borde-beige: 1px solid ##B2B2B2;
+
     --gris-oscuro    : #4C4C4B;
     --margen-superior: 2em;
 }
@@ -80,10 +82,11 @@ hr{
 }
 
 input[type="text"], input[type="tel"]{
-    border    : var(--borde-gris);
-    margin-top: var(--margen-superior);
-    padding   : .5em;
-    width     : 20.9375em;
+    border      : var(--borde-gris);
+    margin-top  : var(--margen-superior);
+    padding-left: 1em;
+    width       : 335px;
+    height      : 40px;
 }
 
 label{
@@ -110,9 +113,9 @@ button{
     font-weight   : 700;
     letter-spacing: 0.0125em;
     line-height   : 1.0625em;
-    width         : 13.3125em;
+    width         : 272px;
+    height        : 48px;
     margin        : var(--margen-superior);
-    padding       : 0.875em;
     align-self    : center;
 }
 figure{
@@ -147,7 +150,6 @@ figcaption{
 #caducidad{
     display        : flex;
     flex-direction : row;
-    width          : 300px;
     justify-content: space-between;
     margin         : 0;
 }
@@ -169,10 +171,10 @@ figcaption{
     margin-top: 2.5em;
     background: black;
     color     : white;
-    width     : 15em;
-    height    : 3em;
+    width     : 240px;
+    height    : 48px;
     display   : none;
-    align-self: flex-start;
+    align-self: center;
 }
 
 
@@ -227,7 +229,7 @@ figcaption{
 .info{
     background-image   : url("../assets/Icons/info.svg");
     background-repeat  : no-repeat;
-    background-position: 19.8em;
+    background-position: 23em;
     cursor             : help;
 }
 
@@ -258,10 +260,10 @@ input:focus + label {
 
 /* Seccion tarjeta de regalo */
 .interludio{
-    display: flex;
+    display       : flex;
     flex-direction: column;
-    align-self: flex-start;
-    width: 100%;
+    align-self    : flex-start;
+    width         : 100%;
 }
 
 /* Clases de la subseccion tarjetas */
@@ -277,17 +279,29 @@ input:focus + label {
 }
 /* Bloque semántico: Posicionamiento de las flechas en Mes y año en la seccion 'expire date' en tarjetas */
 .arrow{
-    background-image   : url("../assets/Icons/arrow_down.svg");
-    background-repeat  : no-repeat;
-    background-size: 20px;
+    background-image : url("../assets/Icons/arrow_down.svg");
+    background-repeat: no-repeat;
+    background-size  : 20px;
 }
 
 #year{
-    background-position: 2.8em;
+    background-position: 3.7em;
+    width              : 88px;
+    height             : 44px;
+    padding-right      : 1em;
 }
 
 #month{
-    background-position: 3.3em;
+    background-position: 4em;
+    width              : 88px;
+    height             : 44px;
+    padding-right      : 1em;
+}
+
+#cvn{
+    width        : 96px;
+    height       : 44px;
+    padding-right: 1em;
 }
 
 /* Errores */
