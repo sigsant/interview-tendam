@@ -8,6 +8,9 @@
         margin       : 1.25em auto;
         margin-bottom: 3em;
     }
+    .interludio{
+        width: 357px;
+    }
 }
 
 @media (min-width: 979px){
@@ -38,15 +41,17 @@
         grid-area     : caja;
     }
     input[type="text"], input[type="tel"]{
-        border   : 1px solid #b2b2b2;
-        width    : 400px;
-        font-size: 13px;
+        border: 1px solid #b2b2b2;
+        width : 400px;
     }
     form{
         margin-top: .7em;
     }
+    article{
+        width: 25.9375em;
+    }
     .info{
-        background-position: 29em;
+        background-position: 26.8em;
     }
     .visa{
         background-position: 21.875em;
@@ -61,9 +66,6 @@
         width      : 15em;
         margin-left: 1em;
     }
-    article{
-        width: 25.9375em;
-    }
     .paypal{
         display        : flex;
         width          : 25.9375em;
@@ -72,6 +74,9 @@
     #pay-paypal{
         justify-self: flex-start;
         margin      : 2.5em 0em;
+    }
+    .interludio{
+        width: 425px;
     }
 }
 

@@ -50,6 +50,7 @@ nav{
 
 main{
     width          : 100%;
+    flex-direction : column;
     margin         : 0 auto;
     justify-content: center;
 }
@@ -86,7 +87,8 @@ input[type="text"], input[type="tel"]{
     margin-top  : var(--margen-superior);
     padding-left: 1em;
     width       : 335px;
-    height      : 40px;
+    height      : 35px;
+    font-size   : 14px;
 }
 
 label{
@@ -231,7 +233,7 @@ figcaption{
 .info{
     background-image   : url("../assets/Icons/info.svg");
     background-repeat  : no-repeat;
-    background-position: 23em;
+    background-position: 22em;
     cursor             : help;
 }
 
@@ -247,11 +249,11 @@ figcaption{
 }
 
 .label-flotante > label{
-    padding   : 0.5em 0em;
+    padding   : 0.8em 0em;
     align-self: flex-start;
     position  : absolute;
     font-size : 0.72em;
-    top       : 1.7em;
+    top       : 1.8em;
     opacity   : 0;
     transition: linear .8s all;
 }
@@ -264,8 +266,8 @@ input:focus + label {
 .interludio{
     display       : flex;
     flex-direction: column;
-    align-self    : flex-start;
-    width         : 100%;
+    align-self    : center;
+    width         : 370px;
 }
 
 /* Clases de la subseccion tarjetas */
