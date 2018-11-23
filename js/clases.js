@@ -18,7 +18,11 @@ class Expresiones{
     }
     validarApellido(nombre, clase){
         // El usuario debe ingresar sus dos apellidos
-        let regex = new RegExp('^[A-Za-z]+\\s[A-Za-z]+$');
+        //let regex = new RegExp('^[A-Za-z]+\\s[A-Za-z]+$');
+        
+        // Solo si se quiere validar un apellido
+         let regex = new RegExp('^[A-Za-z]+$');
+
     
         if(regex.test(nombre.value) && nombre.value.length >= 3){
             clase.classList.add('hidden');
